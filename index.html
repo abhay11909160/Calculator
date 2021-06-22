@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title> Calculator </title>
+<style>
+body{
+	background: #23074d;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #cc5333, #23074d);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #cc5333, #23074d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+		font-family: 'Quicksand', sans-serif;
+	}
+
+
+.formstyle{
+	border-radius:5px;
+	position: relative;
+	background: rgba(255,255,255, 0.05);
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 10;
+	backdrop-filter: blur(15px);
+	border-top: 1px solid rgba(255,255,255, 0.2);
+	border-left: 1px solid rgba(255,255,255, 0.2);
+	
+	width: 400px;
+	box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#clear{
+	width: 100%;
+}
+#calc{
+height: 110px;
+	text-align: right;
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 30px;
+	background: transparent;
+	color: #fff;
+	border-bottom: 1px solid rgba(255,255,255,0.09);
+	border-left: 1px solid rgba(255,255,255,0.09);
+}
+.but{
+	border: none;
+	place-items: center;
+	outline: none;
+	height: 75px;
+	width: 100%;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 20px;
+	border-bottom: 1px solid rgba(255,255,255,0.09);
+	border-left: 1px solid rgba(255,255,255,0.09);
+	transition: 0.5s;
+	background: transparent;
+}
+.but:hover{
+	transition: 0px;
+	background: rgba(255,255,255, 0.09);
+}
+</style>
+</head>
+<body><center>
+	<div class= "formstyle">
+<form name = "form1">
+	
+	<table style="width:100%">
+		<tr>
+			<td colspan="4">
+  <input id = "calc" type ="text" name = "answer" placeholder="Your Calculator..."></td>
+</tr>
+<tr>
+	<td>
+   
+  <input type = "button" value = "C" onclick = "form1.answer.value = ' ' " id= "clear" class="but" ></td>
+  <td>
+  	<input type = "button" value = "(" onclick = "form1.answer.value += '(' " class="but">
+  
+  </td>
+  <td>
+  	<input type = "button" value = ")" onclick = "form1.answer.value += ')' " class="but">
+  	
+  </td>
+  <td>
+  	<input type = "button" value = "*" onclick = "form1.answer.value += '*' " class="but">
+  </td>
+
+</tr>
+<tr>
+	<td>
+		<input type = "button" value = "7" onclick = "form1.answer.value += '7' " class="but">
+	</td>
+	<td>
+  <input type = "button" value = "8" onclick = "form1.answer.value += '8' " class="but">
+</td>
+<td>
+  <input type = "button" value = "9" onclick = "form1.answer.value += '9' " class="but">
+	</td>
+	<td>
+		 <input type = "button" value = "/" onclick = "form1.answer.value += '/' " class="but">
+	</td>
+</tr>
+<tr>
+	<td>
+		<input type = "button" value = "4" onclick = "form1.answer.value += '4' " class="but">
+	</td>
+	<td>
+  <input type = "button" value = "5" onclick = "form1.answer.value += '5' " class="but">
+</td>
+<td>
+  <input type = "button" value = "6" onclick = "form1.answer.value += '6' " class="but">
+</td>
+<td>
+	   <input type = "button" value = "+" onclick = "form1.answer.value += '+' " class="but">
+	</td>
+</tr>
+<tr>
+	<td>
+<input type = "button" value = "1" onclick = "form1.answer.value += '1' " class="but">
+</td>
+<td>
+  <input type = "button" value = "2" onclick = "form1.answer.value += '2' " class="but">
+</td>
+<td>
+  <input type = "button" value = "3" onclick = "form1.answer.value += '3' " class="but">
+</td>
+<td>
+
+  	<input type = "button" value = "*" onclick = "form1.answer.value += '*' " class="but">
+	</td>
+</tr>
+<tr>
+	<td>
+		 <input type = "button" value = "0" onclick = "form1.answer.value += '0' " class="but">
+		</td>
+		<td>
+    <input type = "button" value = "." onclick = "form1.answer.value += '.' " class="but">
+</td>
+<td colspan="2">
+	<!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->
+  <input type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) " class="but" style="width:100%">
+ </td>
+</tr>
+</form>
+</div>
+
+</center>
+</body>
+</html>
